@@ -1,0 +1,16 @@
+.content {
+    display: flex;
+    flex: 1;
+    min-width: 0;
+    gap: 8px;
+}
+
+.secondary {
+    color: var(--text);
+    background-color: var(--surface);
+    border-color: var(--border);
+}
+
+.secondary:hover {
+    background-color: var(--bg);
+}

@@ -1,0 +1,58 @@
+:root {
+  --bg: #f4f5f7;
+  --surface: #ffffff;
+  --text: #1f2328;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --accent: #4f46e5;
+  --accent-hover: #4338ca;
+  --danger: #dc2626;
+  --radius: 8px;
+
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: var(--text);
+  background-color: var(--bg);
+}
+
+body {
+  margin: 0;
+}
+
+#root {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 48px 16px;
+}
+
+input {
+  flex: 1;
+  /* drop the browser's default input width so inputs can shrink inside flex rows */
+  width: 0;
+  min-width: 0;
+  padding: 8px 12px;
+  font: inherit;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background-color: var(--surface);
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgb(79 70 229 / 0.15);
+}
+
+button {
+  padding: 8px 14px;
+  font: inherit;
+  font-weight: 500;
+  color: white;
+  background-color: var(--accent);
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--accent-hover);
+}
