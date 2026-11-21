@@ -1,0 +1,35 @@
+.content {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    padding: 12px 0;
+    border-top: 1px solid var(--border);
+}
+
+.text {
+    flex: 1;
+    text-align: left;
+}
+
+.value {
+    color: var(--muted);
+}
+
+.secondary {
+    color: var(--text);
+    background-color: transparent;
+    border-color: var(--border);
+}
+
+.secondary:hover {
+    background-color: var(--bg);
+}
+
+.danger {
+    color: var(--danger);
+    background-color: transparent;
+}
+
+.danger:hover {
+    background-color: #fef2f2;
+}

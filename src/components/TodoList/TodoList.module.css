@@ -4,44 +4,8 @@
     padding: 0;
 }
 
-.item {
-    display: flex;
-    gap: 8px;
-    align-items: center;
-    padding: 12px 0;
-    border-top: 1px solid var(--border);
-}
-
-.text {
-    flex: 1;
-    text-align: left;
-}
-
-.value {
-    color: var(--muted);
-}
-
 .empty {
     margin: 24px 0 0;
     color: var(--muted);
     text-align: center;
-}
-
-.secondary {
-    color: var(--text);
-    background-color: transparent;
-    border-color: var(--border);
-}
-
-.secondary:hover {
-    background-color: var(--bg);
-}
-
-.danger {
-    color: var(--danger);
-    background-color: transparent;
-}
-
-.danger:hover {
-    background-color: #fef2f2;
 }

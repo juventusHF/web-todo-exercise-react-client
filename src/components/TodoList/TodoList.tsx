@@ -1,6 +1,6 @@
 import {useState} from "react";
 import type {Todo} from "../../model/Todo.ts";
-import {TodoForm} from "../TodoForm/TodoForm.tsx";
+import {TodoItem} from "../TodoItem/TodoItem.tsx";
 import styles from "./TodoList.module.css";
 
 type TodoListProps = {
@@ -27,24 +27,15 @@ export function TodoList({todos, onUpdate, onDelete}: TodoListProps) {
     return (
         <ul className={styles.content}>{
             todos.map(todo =>
-                <li key={todo.id} className={styles.item}>{
-                    editingId === todo.id
-                        ? <TodoForm
-                            initialName={todo.name}
-                            initialValue={todo.value}
-                            submitLabel="Save"
-                            onSubmit={(name, value) => handleUpdate(todo.id!, name, value)}
-                            onCancel={() => setEditingId(null)}
-                        />
-                        : <>
-                            <span className={styles.text}>
-                                <strong>{todo.name}</strong> <span className={styles.value}>{todo.value}</span>
-                            </span>
-                            <button className={styles.secondary} type="button" onClick={() => setEditingId(todo.id!)}>Edit</button>
-                            <button className={styles.danger} type="button" onClick={() => onDelete(todo.id!)}>Delete</button>
-                        </>
-                }
-                </li>
+                <TodoItem
+                    key={todo.id}
+                    todo={todo}
+                    isEditing={editingId === todo.id}
+                    onEdit={() => setEditingId(todo.id!)}
+                    onCancel={() => setEditingId(null)}
+                    onUpdate={(name, value) => handleUpdate(todo.id!, name, value)}
+                    onDelete={() => onDelete(todo.id!)}
+                />
             )
         }
         </ul>
