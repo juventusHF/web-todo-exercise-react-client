@@ -15,7 +15,7 @@ Keep the browser open while you work. Every time you save a file, the page updat
 
 **File:** `src/components/TodoItem/TodoItem.tsx`
 
-Add a todo with the form. You see an empty row with an "Edit" button, but no text.
+In the browser you see three empty rows with an "Edit" button, but no text.
 
 Inside the `<span className={styles.text}>`, show the **name** and the **value** of the todo.
 The name should be bold (use `<strong>`).
