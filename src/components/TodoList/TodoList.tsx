@@ -9,7 +9,8 @@ type TodoListProps = {
     onDelete: (id: string) => Promise<boolean>;
 }
 
-export function TodoList({todos, onUpdate, onDelete}: TodoListProps) {
+// TODO Exercise 4: also take "onDelete" out of the props
+export function TodoList({todos, onUpdate}: TodoListProps) {
     const [editingId, setEditingId] = useState<string | null>(null);
 
     async function handleUpdate(id: string, name: string, value: string): Promise<boolean> {
@@ -20,9 +21,8 @@ export function TodoList({todos, onUpdate, onDelete}: TodoListProps) {
         return succeeded;
     }
 
-    if (todos.length === 0) {
-        return <p className={styles.empty}>No todos yet.</p>
-    }
+    // TODO Exercise 3: if there are no todos, show the text "No todos yet." instead of an empty list
+    //  (use a <p> with className={styles.empty})
 
     return (
         <ul className={styles.content}>{
@@ -34,7 +34,7 @@ export function TodoList({todos, onUpdate, onDelete}: TodoListProps) {
                     onEdit={() => setEditingId(todo.id!)}
                     onCancel={() => setEditingId(null)}
                     onUpdate={(name, value) => handleUpdate(todo.id!, name, value)}
-                    onDelete={() => onDelete(todo.id!)}
+                    // TODO Exercise 4: pass an onDelete function to TodoItem that deletes this todo
                 />
             )
         }

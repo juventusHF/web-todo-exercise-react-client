@@ -8,10 +8,10 @@ type TodoItemProps = {
     onEdit: () => void;
     onCancel: () => void;
     onUpdate: (name: string, value: string) => Promise<boolean>;
-    onDelete: () => void;
+    // TODO Exercise 4: add an "onDelete" prop (a function without parameters that returns nothing)
 }
 
-export function TodoItem({todo, isEditing, onEdit, onCancel, onUpdate, onDelete}: TodoItemProps) {
+export function TodoItem({todo, isEditing, onEdit, onCancel, onUpdate}: TodoItemProps) {
     return (
         <li className={styles.content}>{
             isEditing
@@ -24,10 +24,10 @@ export function TodoItem({todo, isEditing, onEdit, onCancel, onUpdate, onDelete}
                 />
                 : <>
                     <span className={styles.text}>
-                        <strong>{todo.name}</strong> <span className={styles.value}>{todo.value}</span>
+                        {/* TODO Exercise 1: show the name (bold) and the value of the todo */}
                     </span>
                     <button className={styles.secondary} type="button" onClick={onEdit}>Edit</button>
-                    <button className={styles.danger} type="button" onClick={onDelete}>Delete</button>
+                    {/* TODO Exercise 4: add a "Delete" button that calls onDelete when clicked */}
                 </>
         }
         </li>

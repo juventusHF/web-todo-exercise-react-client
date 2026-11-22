@@ -51,6 +51,7 @@ function App() {
   return (
     <div className={styles.content}>
         <h1 className={styles.title}>Todos</h1>
+        {/* TODO Exercise 5: show how many todos there are with your new TodoCount component */}
         <TodoForm submitLabel="Add" onSubmit={createTodo}/>
         {error && <p className={styles.error}>{error}</p>}
         <TodoList todos={allTodos} onUpdate={editTodo} onDelete={removeTodo}/>
