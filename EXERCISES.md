@@ -37,20 +37,7 @@ Add an `onChange` event handler to the "Value" input that updates the `value` st
 
 ✅ **Done when:** you can type into both fields and add a new todo.
 
-## Exercise 3: Show a message when the list is empty (state)
-
-**File:** `src/components/TodoList/TodoList.tsx`
-
-If there are no todos, the user sees nothing at all. Show the text `No todos yet.` instead.
-
-💡 **Hint:** `todos` is an array. `todos.length` tells you how many todos there are.
-A component can `return` different JSX depending on an `if`.
-Use `<p className={styles.empty}>` so it looks nice.
-
-✅ **Done when:** you see "No todos yet." when there are no todos, and the list when there are some.
-(If your list already has todos, you can check this again after Exercise 4, when you can delete them.)
-
-## Exercise 4: Delete a todo (props and event handlers)
+## Exercise 3: Delete a todo (props and event handlers)
 
 **Files:** `src/components/TodoItem/TodoItem.tsx` and `src/components/TodoList/TodoList.tsx`
 
@@ -71,6 +58,19 @@ Do it in small steps:
 💡 **Hint:** Look at how the "Edit" button and the `onEdit` prop work. Delete works the same way.
 
 ✅ **Done when:** clicking "Delete" removes the todo from the list (and it is still gone after reloading the page).
+
+## Exercise 4: Show a message when the list is empty (state)
+
+**File:** `src/components/TodoList/TodoList.tsx`
+
+If there are no todos, the user sees nothing at all. Show the text `No todos yet.` instead.
+
+💡 **Hint:** `todos` is an array. `todos.length` tells you how many todos there are.
+A component can `return` different JSX depending on an `if`.
+Use `<p className={styles.empty}>` so it looks nice.
+
+✅ **Done when:** you see "No todos yet." when there are no todos, and the list when there are some.
+Delete all your todos to check it.
 
 ## Exercise 5 (bonus): Your own component (components and props)
 
